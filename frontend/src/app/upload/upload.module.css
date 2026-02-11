@@ -1,0 +1,146 @@
+@reference "tailwindcss";
+
+.heading {
+  @apply text-3xl font-bold mb-1;
+}
+
+.subHeading {
+  @apply text-white/50 mb-8;
+}
+
+/* ── Drop zone ── */
+.dropZone {
+  @apply relative flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-white/20 px-8 py-16 text-center transition cursor-pointer;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dropZone:hover {
+  @apply border-blue-400/50 bg-white/[0.04];
+}
+
+.dropZoneActive {
+  @apply border-blue-400 bg-blue-500/10;
+}
+
+.dropIcon {
+  @apply mb-4 text-blue-400;
+}
+
+.dropLabel {
+  @apply text-lg font-medium mb-1;
+}
+
+.dropHint {
+  @apply text-sm text-white/40;
+}
+
+.fileInput {
+  @apply absolute inset-0 opacity-0 cursor-pointer;
+}
+
+/* ── Selected file ── */
+.selectedFile {
+  @apply mt-6 rounded-xl border border-white/10 p-5;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.fileName {
+  @apply font-medium mb-1;
+}
+
+.fileSize {
+  @apply text-sm text-white/40;
+}
+
+/* ── Name field ── */
+.nameField {
+  @apply mt-4;
+}
+
+.label {
+  @apply block text-sm font-medium text-white/70 mb-1.5;
+}
+
+.input {
+  @apply w-full rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder-white/30 outline-none transition focus:border-blue-500;
+}
+
+/* ── Actions ── */
+.actions {
+  @apply mt-6 flex gap-3;
+}
+
+.uploadBtn {
+  @apply rounded-full bg-blue-500 px-8 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.clearBtn {
+  @apply rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white/60 transition hover:border-white/30 hover:text-white;
+}
+
+/* ── Results ── */
+.result {
+  @apply mt-8 rounded-xl border border-emerald-500/30 p-6;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.resultTitle {
+  @apply text-lg font-semibold text-emerald-300 mb-2;
+}
+
+.resultMeta {
+  @apply text-sm text-white/60 mb-4;
+}
+
+.runBtn {
+  @apply rounded-full bg-emerald-500 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-600 disabled:opacity-50;
+}
+
+.mlToggle {
+  @apply mt-3 flex items-center gap-2 text-sm text-white/50;
+}
+
+.mlToggle input {
+  @apply accent-blue-500;
+}
+
+/* ── Error ── */
+.error {
+  @apply mt-4 rounded-lg bg-red-500/15 px-4 py-3 text-sm text-red-300;
+}
+
+/* ── Progress ── */
+.progress {
+  @apply mt-4 text-sm text-blue-300;
+}
+
+/* ── Dataset detail (when ?datasetId= present) ── */
+.datasetDetail {
+  @apply mt-8 rounded-xl border border-white/10 p-6;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.datasetTitle {
+  @apply text-lg font-semibold mb-4;
+}
+
+.runsGrid {
+  @apply grid gap-3 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.runCard {
+  @apply rounded-lg border border-white/10 p-4;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.runYear {
+  @apply text-lg font-bold text-blue-300;
+}
+
+.runLabel {
+  @apply text-sm text-white/60;
+}
+
+.runFeatures {
+  @apply mt-1 text-xs text-white/40;
+}

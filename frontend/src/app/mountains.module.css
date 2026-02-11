@@ -1,0 +1,15 @@
+@reference "tailwindcss";
+
+/* ── Mountains wrapper — drifts vertically via GSAP ── */
+.mountainLayer {
+  @apply fixed inset-0 -z-10;
+}
+
+.mountainSvg {
+  @apply absolute bottom-0 left-0 w-full;
+  height: 55%;
+}
+
+.snowGround {
+  @apply absolute bottom-0 left-0 w-full h-[15%] bg-gradient-to-t from-[#d6e8f0] to-transparent;
+}

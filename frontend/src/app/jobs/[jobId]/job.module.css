@@ -1,0 +1,238 @@
+@reference "tailwindcss";
+
+/* ── Page header ── */
+.header {
+  @apply mb-6;
+}
+
+.title {
+  @apply text-2xl font-bold;
+}
+
+.meta {
+  @apply mt-1 text-sm text-white/50;
+}
+
+.loading {
+  @apply flex items-center justify-center py-20 text-white/50 text-lg;
+}
+
+.error {
+  @apply rounded-lg bg-red-500/15 px-5 py-4 text-sm text-red-300;
+}
+
+/* ── Tabs ── */
+.tabs {
+  @apply flex gap-1 border-b border-white/10 mb-6;
+}
+
+.tab {
+  @apply px-5 py-3 text-sm font-medium text-white/50 transition hover:text-white cursor-pointer border-b-2 border-transparent;
+}
+
+.tabActive {
+  @apply px-5 py-3 text-sm font-medium text-white cursor-pointer border-b-2 border-blue-400;
+}
+
+/* ── Summary cards ── */
+.summaryGrid {
+  @apply grid gap-4 grid-cols-2 md:grid-cols-4 mb-8;
+}
+
+.summaryCard {
+  @apply rounded-xl border border-white/10 p-5;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.summaryValue {
+  @apply text-2xl font-bold;
+}
+
+.summaryLabel {
+  @apply text-xs text-white/45 mt-1;
+}
+
+/* ── Confidence breakdown ── */
+.confidenceGrid {
+  @apply grid gap-4 grid-cols-3 mb-8;
+}
+
+.confCard {
+  @apply rounded-xl border border-white/10 p-5 text-center;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.confValue {
+  @apply text-xl font-bold;
+}
+
+.confLabel {
+  @apply text-xs text-white/40 mt-1;
+}
+
+.confHigh { @apply text-emerald-400; }
+.confMed { @apply text-yellow-400; }
+.confLow { @apply text-red-400; }
+
+/* ── Standards ── */
+.standardsGrid {
+  @apply grid gap-4 grid-cols-2 md:grid-cols-5 mb-8;
+}
+
+/* ── ML Sidecar ── */
+.mlSection {
+  @apply rounded-xl border border-blue-500/20 p-5 mb-8;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.mlTitle {
+  @apply text-sm font-semibold text-blue-300 mb-2;
+}
+
+.mlGrid {
+  @apply grid gap-3 grid-cols-2 md:grid-cols-4;
+}
+
+.mlStat {
+  @apply text-sm;
+}
+
+.mlStatValue {
+  @apply text-lg font-bold text-white;
+}
+
+.mlStatLabel {
+  @apply text-xs text-white/40;
+}
+
+/* ── Tables (shared for matches, exceptions, audit) ── */
+.tableWrap {
+  @apply overflow-x-auto rounded-xl border border-white/10;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table {
+  @apply w-full text-sm;
+}
+
+.table thead {
+  @apply border-b border-white/10;
+}
+
+.table th {
+  @apply px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/40 whitespace-nowrap;
+}
+
+.table td {
+  @apply px-4 py-2.5 border-t border-white/5 whitespace-nowrap;
+}
+
+.table tbody tr {
+  @apply transition hover:bg-white/[0.03];
+}
+
+.cellMono {
+  @apply font-mono text-xs text-white/70;
+}
+
+.cellBold {
+  @apply font-medium;
+}
+
+/* ── Pagination ── */
+.pagination {
+  @apply mt-4 flex items-center justify-between;
+}
+
+.pageInfo {
+  @apply text-sm text-white/40;
+}
+
+.pageButtons {
+  @apply flex gap-2;
+}
+
+.pageBtn {
+  @apply rounded-lg bg-white/5 px-4 py-2 text-sm text-white/60 transition hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed;
+}
+
+/* ── Downloads ── */
+.downloadsGrid {
+  @apply grid gap-4 md:grid-cols-3;
+}
+
+.downloadCard {
+  @apply flex flex-col items-center justify-center rounded-xl border border-white/10 p-8 transition hover:border-blue-400/40 hover:bg-white/[0.03] cursor-pointer;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.downloadIcon {
+  @apply mb-3 text-blue-400 text-3xl;
+}
+
+.downloadTitle {
+  @apply font-medium mb-1;
+}
+
+.downloadDesc {
+  @apply text-xs text-white/40 text-center;
+}
+
+.downloadBtn {
+  @apply mt-4 rounded-full bg-blue-500/20 px-5 py-2 text-sm font-medium text-blue-300 transition hover:bg-blue-500/30;
+}
+
+/* ── Badges ── */
+.badgeGreen {
+  @apply inline-block rounded-full bg-emerald-500/20 px-2.5 py-0.5 text-xs font-medium text-emerald-300;
+}
+
+.badgeBlue {
+  @apply inline-block rounded-full bg-blue-500/20 px-2.5 py-0.5 text-xs font-medium text-blue-300;
+}
+
+.badgeYellow {
+  @apply inline-block rounded-full bg-yellow-500/20 px-2.5 py-0.5 text-xs font-medium text-yellow-300;
+}
+
+.badgeRed {
+  @apply inline-block rounded-full bg-red-500/20 px-2.5 py-0.5 text-xs font-medium text-red-300;
+}
+
+.badgeGray {
+  @apply inline-block rounded-full bg-white/10 px-2.5 py-0.5 text-xs font-medium text-white/50;
+}
+
+/* ── Pipeline stages ── */
+.stagesRow {
+  @apply flex gap-2 mb-8 overflow-x-auto;
+}
+
+.stage {
+  @apply flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-xs;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stageCompleted {
+  @apply border-emerald-500/30 text-emerald-300;
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.stageRunning {
+  @apply border-blue-500/30 text-blue-300;
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.stageFailed {
+  @apply border-red-500/30 text-red-300;
+  background: rgba(239, 68, 68, 0.06);
+}
+
+.stagePending {
+  @apply border-white/10 text-white/30;
+}
+
+/* ── Section heading inside tabs ── */
+.sectionTitle {
+  @apply text-lg font-semibold mb-4 text-white/80;
+}

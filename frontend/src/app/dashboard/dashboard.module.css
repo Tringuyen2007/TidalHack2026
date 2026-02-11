@@ -1,0 +1,109 @@
+@reference "tailwindcss";
+
+/* ── Loading ── */
+.loading {
+  @apply flex items-center justify-center py-20 text-white/50 text-lg;
+}
+
+/* ── Headings ── */
+.heading {
+  @apply text-3xl font-bold mb-1;
+}
+
+.subHeading {
+  @apply text-white/50 mb-8;
+}
+
+/* ── Quick-action cards grid ── */
+.grid {
+  @apply grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-10;
+}
+
+.card {
+  @apply rounded-xl border border-white/10 p-5 transition hover:border-white/20 hover:bg-white/[0.04] cursor-pointer no-underline text-white;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cardIcon {
+  @apply mb-3 text-blue-400;
+}
+
+.cardTitle {
+  @apply text-lg font-semibold mb-1;
+}
+
+.cardDesc {
+  @apply text-xs text-white/45 leading-relaxed;
+}
+
+/* ── Sections ── */
+.section {
+  @apply mb-10;
+}
+
+.sectionTitle {
+  @apply text-lg font-semibold mb-4 text-white/80;
+}
+
+.empty {
+  @apply text-white/40 text-sm;
+}
+
+.link {
+  @apply text-blue-400 hover:text-blue-300 transition;
+}
+
+/* ── Tables ── */
+.tableWrap {
+  @apply overflow-x-auto rounded-xl border border-white/10;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table {
+  @apply w-full text-sm;
+}
+
+.table thead {
+  @apply border-b border-white/10;
+}
+
+.table th {
+  @apply px-5 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/40;
+}
+
+.table td {
+  @apply px-5 py-3 border-t border-white/5;
+}
+
+.table tbody tr {
+  @apply transition hover:bg-white/[0.03];
+}
+
+.cellBold {
+  @apply font-medium;
+}
+
+.cellMono {
+  @apply font-mono text-xs text-white/70;
+}
+
+.tableBtn {
+  @apply rounded-lg bg-blue-500/20 px-3 py-1.5 text-xs font-medium text-blue-300 transition hover:bg-blue-500/30;
+}
+
+/* ── Badges ── */
+.badgeGreen {
+  @apply inline-block rounded-full bg-emerald-500/20 px-2.5 py-0.5 text-xs font-medium text-emerald-300;
+}
+
+.badgeBlue {
+  @apply inline-block rounded-full bg-blue-500/20 px-2.5 py-0.5 text-xs font-medium text-blue-300;
+}
+
+.badgeRed {
+  @apply inline-block rounded-full bg-red-500/20 px-2.5 py-0.5 text-xs font-medium text-red-300;
+}
+
+.badgeGray {
+  @apply inline-block rounded-full bg-white/10 px-2.5 py-0.5 text-xs font-medium text-white/50;
+}

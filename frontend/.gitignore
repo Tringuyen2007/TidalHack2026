@@ -1,0 +1,24 @@
+# Ignore environment files
+.env
+.env.local
+*.log
+
+# Node modules
+node_modules/
+
+# Build output
+.next/
+out/
+build/
+dist/
+
+# IDE/OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Misc
+coverage/
+tsconfig.tsbuildinfo
+.codex/

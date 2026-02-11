@@ -1,0 +1,15 @@
+{
+  "same_weld_segment": 0.52735,
+  "abs_delta_distance_ft": 0.154229,
+  "run_gap_years": 0.119613,
+  "type_compatibility": 0.05089,
+  "abs_delta_wall_thickness_in": 0.049059,
+  "abs_delta_clock_hrs": 0.040758,
+  "abs_delta_depth_pct": 0.021025,
+  "abs_delta_length_in": 0.019203,
+  "abs_delta_width_in": 0.017874,
+  "api_1163_tool_weight": 0.0,
+  "dtw_residual": 0.0,
+  "icp_residual": 0.0,
+  "anchor_density_in_segment": 0.0
+}

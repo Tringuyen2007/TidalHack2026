@@ -1,0 +1,124 @@
+@reference "tailwindcss";
+
+/* ── Page wrapper (same as landing) ── */
+.pageWrapper {
+  @apply relative h-screen text-white font-sans overflow-hidden;
+}
+
+/* ── Background layers (mirrored from landing) ── */
+.darkBase {
+  @apply fixed inset-0 -z-20 bg-[#1a1a1a];
+}
+
+.icySky {
+  @apply fixed inset-0 -z-15 opacity-0;
+  background: linear-gradient(
+    180deg,
+    #b8dced 0%,
+    #d4eaf7 25%,
+    #e8f4fa 45%,
+    #f0f7fb 60%,
+    #dceef8 75%,
+    #c5dfe9 100%
+  );
+}
+
+/* ── Clouds ── */
+.cloud1 {
+  @apply pointer-events-none fixed z-[5] opacity-0;
+  top: 10%;
+  left: 3%;
+  width: 35%;
+  max-width: 450px;
+}
+
+.cloud2 {
+  @apply pointer-events-none fixed z-[5] opacity-0;
+  top: 18%;
+  right: 3%;
+  width: 28%;
+  max-width: 380px;
+}
+
+/* ── Snow canvas ── */
+.snowCanvas {
+  @apply pointer-events-none fixed inset-0 z-[45];
+}
+
+/* ── Back link ── */
+.backLink {
+  @apply fixed top-6 left-8 z-50 text-sm font-medium text-black/70 transition hover:text-black;
+}
+
+/* ── Login form wrapper ── */
+.formWrapper {
+  @apply fixed inset-0 z-30 flex items-center justify-center;
+}
+
+/* ── Card ── */
+.card {
+  @apply w-full max-w-md rounded-2xl border border-white/10 px-10 py-12;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Logo ── */
+.logoGroup {
+  @apply mb-6 flex items-center justify-center;
+}
+
+.logoImage {
+  @apply h-[72px] w-[72px] rounded-full object-contain;
+}
+
+.logoName {
+  @apply text-xl font-bold tracking-tight text-black;
+}
+
+/* ── Headings ── */
+.title {
+  @apply text-center text-2xl font-bold text-black;
+}
+
+.subtitle {
+  @apply mb-6 mt-1.5 text-center text-sm text-black/60;
+}
+
+/* ── Error ── */
+.error {
+  @apply mb-4 rounded-lg bg-red-500/15 px-4 py-2.5 text-center text-sm text-red-300;
+}
+
+/* ── Form ── */
+.form {
+  @apply flex flex-col gap-4;
+}
+
+.fieldGroup {
+  @apply flex flex-col gap-1.5;
+}
+
+.label {
+  @apply text-sm font-medium text-black/80;
+}
+
+.input {
+  @apply w-full rounded-lg border-2 border-black/60 bg-white/15 px-4 py-2.5 text-sm text-black placeholder-black/40 outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Submit ── */
+.submitBtn {
+  @apply mt-1 w-full rounded-full bg-blue-500 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-600 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* ── Register link ── */
+.registerLink {
+  @apply mt-5 text-center text-sm text-black/50;
+}
+.registerLink a {
+  @apply font-medium text-blue-500 hover:text-blue-600 transition;
+}

@@ -1,0 +1,43 @@
+@reference "tailwindcss";
+
+.layout {
+  @apply relative min-h-screen bg-[#0f1a28] text-white font-sans;
+}
+
+/* ── Top bar ── */
+.topBar {
+  @apply flex items-center justify-between border-b border-white/10 px-8 py-4;
+}
+
+.topBarLeft {
+  @apply flex items-center gap-4;
+}
+
+.logoImage {
+  @apply h-10 w-10 rounded-full object-contain;
+}
+
+.topBarTitle {
+  @apply text-xl font-bold tracking-tight;
+}
+
+.topBarNav {
+  @apply flex items-center gap-2;
+}
+
+.navLink {
+  @apply rounded-lg px-4 py-2 text-sm font-medium text-white/60 transition hover:bg-white/5 hover:text-white;
+}
+
+.navLinkActive {
+  @apply rounded-lg px-4 py-2 text-sm font-medium text-white bg-white/10;
+}
+
+.logoutBtn {
+  @apply ml-4 rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white/70 transition hover:border-white/30 hover:text-white;
+}
+
+/* ── Main content area ── */
+.main {
+  @apply mx-auto max-w-6xl px-8 py-8;
+}

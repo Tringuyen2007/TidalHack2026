@@ -1,0 +1,161 @@
+@reference "tailwindcss";
+
+/* ── Page Container ── */
+.pageWrapper {
+  @apply relative h-screen text-white font-sans overflow-hidden;
+}
+
+/* ── Background Layers ── */
+.darkBase {
+  @apply fixed inset-0 -z-20 bg-[#1a1a1a];
+}
+
+/* Static icy sky — does NOT move */
+.icySky {
+  @apply fixed inset-0 -z-15 opacity-0;
+  background: linear-gradient(
+    180deg,
+    #b8dced 0%,
+    #d4eaf7 25%,
+    #e8f4fa 45%,
+    #f0f7fb 60%,
+    #dceef8 75%,
+    #c5dfe9 100%
+  );
+}
+
+/* ── Navigation ── */
+.nav {
+  @apply absolute top-0 left-0 z-50 w-full;
+}
+
+.navInner {
+  @apply flex w-full items-center justify-between px-5 py-4;
+}
+
+.logoGroup {
+  @apply flex items-center gap-3;
+}
+
+.logoImage {
+  @apply h-10 w-10 rounded-full object-contain;
+}
+
+.logoName {
+  @apply text-lg font-semibold tracking-tight text-[#1e293b] drop-shadow-sm;
+  font-family: var(--font-inter), var(--font-geist-sans), sans-serif;
+}
+
+.navLoginBtn {
+  @apply rounded-full bg-[#1e293b]/10 backdrop-blur-sm px-6 py-2 text-sm font-medium text-[#1e293b]
+         border border-[#1e293b]/15 transition-all duration-200
+         hover:bg-[#1e293b]/20 hover:border-[#1e293b]/25;
+  font-family: var(--font-inter), var(--font-geist-sans), sans-serif;
+}
+
+/* ── Hero ── */
+.hero {
+  @apply relative h-full;
+}
+
+.heroInner {
+  @apply mx-auto flex h-full max-w-5xl items-center justify-center px-8;
+}
+
+.textContent {
+  @apply flex flex-col items-center text-center space-y-8;
+}
+
+.headline {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #1e293b;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+}
+
+.headlineItalic {
+  font-style: italic;
+  color: #334155;
+}
+
+.subtitle {
+  @apply max-w-xl;
+  color: #64748b;
+  font-family: var(--font-inter), var(--font-geist-sans), sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.subtitleBreak {
+  @apply hidden md:inline;
+}
+
+.heroLoginBtn {
+  @apply inline-block rounded-full bg-[#1e293b] px-8 py-3.5 text-sm font-semibold text-white
+         shadow-lg transition-all duration-200
+         hover:bg-[#0f172a] hover:shadow-xl hover:scale-[1.02];
+  font-family: var(--font-inter), var(--font-geist-sans), sans-serif;
+}
+
+.loginBtnWrapper {
+  @apply pt-2;
+}
+
+/* ── Clouds (independent floating layers) ── */
+.cloud1 {
+  @apply pointer-events-none fixed z-[5] opacity-0;
+  top: 12%;
+  left: 5%;
+  width: 40%;
+  max-width: 500px;
+}
+
+.cloud2 {
+  @apply pointer-events-none fixed z-[5] opacity-0;
+  top: 22%;
+  right: 2%;
+  width: 32%;
+  max-width: 400px;
+}
+
+.cloud3 {
+  @apply pointer-events-none fixed z-[5] opacity-0;
+  top: 8%;
+  right: 25%;
+  width: 25%;
+  max-width: 350px;
+}
+
+/* ── Snow canvas ── */
+.snowCanvas {
+  @apply pointer-events-none fixed inset-0 z-[45];
+}
+
+/* ── Scroll-down indicator ── */
+.scrollIndicator {
+  @apply fixed bottom-8 z-50 flex flex-col items-center gap-2;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  animation: bounceDown 2s ease-in-out infinite;
+}
+
+.scrollText {
+  @apply text-xs font-medium tracking-wide;
+  color: #94a3b8;
+  font-family: var(--font-inter), var(--font-geist-sans), sans-serif;
+}
+
+.scrollArrow {
+  @apply h-5 w-5;
+  color: #94a3b8;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
