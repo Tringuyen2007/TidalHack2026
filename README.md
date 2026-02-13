@@ -165,4 +165,3 @@ npm run dev                   # starts on http://localhost:3000
 16. ☐ Protected routes redirect to login when not authenticated
 17. ☐ `cd backend && npm run typecheck` passes
 18. ☐ `cd frontend && npm run build` passes
-d
